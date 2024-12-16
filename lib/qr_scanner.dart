@@ -42,6 +42,14 @@ class _PictureDecodeState extends State<PictureDecode> {
         title: Text('Scan Qr Code'),
         backgroundColor: Colors.red,
         foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.flash_on),
+            onPressed: () {
+              _codeDartScanController.toggleFlash();
+            },
+          )
+        ],
       ),
       bottomSheet: ValueListenableBuilder<bool>(
           valueListenable: isEnterCodeMenually,
